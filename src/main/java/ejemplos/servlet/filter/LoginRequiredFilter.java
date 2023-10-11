@@ -1,4 +1,4 @@
-package com.in28minutes.filter;
+package ejemplos.servlet.filter;
 
 import java.io.IOException;
 
