@@ -100,7 +100,7 @@ public class MyServlet2 extends HttpServlet {
 		out.println("</style>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<h1>Bienvenido " + request.getParameter("fname") + " !!</h1>");
+		out.println("<h1>Bienvenido/a " + request.getParameter("fname") + " !!</h1>");
 	}
 
 }
