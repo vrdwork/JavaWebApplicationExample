@@ -1,5 +1,6 @@
 package ejemplos.servlet.curso;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,10 +19,10 @@ public class MyServlet2 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		// send HTML page to client
-		out.println("<html>");
-		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
-		out.println("<body>");
-		out.println("<h1>Bienvenido!!</h1>");
+		//MyObject obj = ... //build somehow
+		request.setAttribute("valueFname", request.getParameter("fname"));
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/saludo.jsp");
+		rd.forward(request, response);
 	}
 
 }
